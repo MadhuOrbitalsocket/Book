@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greg Johnson | The Johnson Adventures</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Lora:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ivory: #FAF9F6;
+  --charcoal: #2F2F2F;
+  --sage: #7A8F85;
+  --brass: #B08D57;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Lora', serif;
+  background: var(--ivory);
+  color: var(--charcoal);
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.narrow { max-width: 720px; }
+.center { text-align: center; }
+
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e3df;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--charcoal);
+}
+
+nav a:hover { color: var(--brass); }
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+}
+
+section {
+  padding: 80px 0;
+}
+
+section.light { background: #f1f0ec; }
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 { font-size: 3rem; margin-bottom: 20px; }
+h2 { text-align: center; margin-bottom: 30px; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.subtitle { font-style: italic; margin-bottom: 20px; }
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+.primary {
+  background: var(--sage);
+  color: white;
+}
+
+.primary:hover { background: var(--brass); }
+
+.secondary {
+  border: 1px solid var(--sage);
+  color: var(--sage);
+}
+
+.secondary:hover {
+  border-color: var(--brass);
+  color: var(--brass);
+}
+
+.book-placeholder {
+  height: 320px;
+  background: #eee;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  color: #777;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.testimonial {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+.newsletter input {
+  padding: 12px;
+  width: 260px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+}
+
+.footer {
+  padding: 30px 0;
+  border-top: 1px solid #e5e3df;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Greg Johnson</div>
+      <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#book">The Book</a>
+        <a href="#buy">Buy</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section id="home">
+  <div class="container hero">
+    <div>
+      <h1>The Johnson Adventures</h1>
+      <p class="subtitle">Thoughtful storytelling, quiet wit, and reflections that stay with you.</p>
+      <p>
+        I’ve spent a lifetime observing people, moments, and the meaning hidden in everyday experiences.
+        This book brings those reflections together with warmth, honesty, and gentle humor.
+      </p>
+      <br>
+      <a href="#buy" class="btn primary">Buy Now — $25</a>
+      <a href="https://www.amazon.com" target="_blank" class="btn secondary">Buy on Amazon</a>
+    </div>
+    <div class="book-placeholder">Book Cover Coming Soon</div>
+  </div>
+</section>
+
+<section id="about" class="light">
+  <div class="container narrow">
+    <h2>About Greg</h2>
+    <p>
+      I’m a thoughtful observer by nature—someone who believes the most meaningful stories often emerge
+      from everyday life. My professional journey has allowed me to work closely with people, ideas,
+      and systems, shaping my appreciation for curiosity, resilience, and connection.
+    </p>
+    <p>
+      Writing has always been my way of slowing down and making sense of the world. With a balance of wit
+      and reflection, I aim to share stories that feel personal yet familiar. <em>The Johnson Adventures</em>
+      is the culmination of years of learning, listening, and living.
+    </p>
+  </div>
+</section>
+
+<section id="book">
+  <div class="container narrow">
+    <h2>The Book</h2>
+    <p>
+      <strong>The Johnson Adventures</strong> is a thoughtful, witty journey through curiosity,
+      connection, and the small moments that quietly shape who we become.
+    </p>
+    <p>
+      These stories explore family, discovery, and resilience—inviting readers to pause,
+      smile, and reflect on their own paths.
+    </p>
+    <p><strong>Format:</strong> Printed Edition</p>
+    <p><strong>Price:</strong> $25</p>
+  </div>
+</section>
+
+<section id="buy" class="light">
+  <div class="container center">
+    <h2>Buy the Book</h2>
+    <p>Choose your preferred way to purchase.</p>
+    <br>
+    <a href="#" class="btn primary">Buy Now (PayPal / Card)</a>
+    <a href="https://www.amazon.com" target="_blank" class="btn secondary">Buy on Amazon</a>
+  </div>
+</section>
+
+<section class="light">
+  <div class="container">
+    <h2>What Readers Are Saying</h2>
+    <div class="testimonials">
+      <div class="testimonial">“A warm, engaging read that feels both personal and universal.”</div>
+      <div class="testimonial">“Thoughtful storytelling with just the right touch of humor.”</div>
+      <div class="testimonial">“You can feel the life experience behind every page.”</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container center">
+    <h2>Stay in Touch</h2>
+    <p>Sign up for updates, events, and future releases.</p>
+    <br>
+    <form class="newsletter">
+      <input type="email" placeholder="Your email address" required>
+      <button class="btn primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container center">
+    © 2026 Greg Johnson. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
