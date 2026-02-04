@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greg Johnson | The Johnson Adventures</title>
+<title>The Johnson Adventures | Greg Johnson</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Lora:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:wght@400;500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --ivory: #FAF9F6;
-  --charcoal: #2F2F2F;
-  --sage: #7A8F85;
-  --brass: #B08D57;
+  --ivory: #FBF7F2;
+  --ink: #1E1E1E;
+  --royal: #1F3C88;
+  --crimson: #B11226;
+  --gold: #E0B44C;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20,7 +21,7 @@
 body {
   font-family: 'Lora', serif;
   background: var(--ivory);
-  color: var(--charcoal);
+  color: var(--ink);
   line-height: 1.7;
 }
 
@@ -30,12 +31,12 @@ body {
   padding: 0 20px;
 }
 
-.narrow { max-width: 720px; }
-.center { text-align: center; }
+section { padding: 90px 0; }
 
 header {
-  padding: 20px 0;
-  border-bottom: 1px solid #e5e3df;
+  background: var(--royal);
+  color: white;
+  padding: 22px 0;
 }
 
 nav {
@@ -45,78 +46,98 @@ nav {
 }
 
 nav a {
+  color: white;
   margin-left: 20px;
+  text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
-  text-decoration: none;
-  color: var(--charcoal);
 }
 
-nav a:hover { color: var(--brass); }
+nav a:hover { color: var(--gold); }
 
 .logo {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
 }
 
-section {
-  padding: 80px 0;
-}
-
-section.light { background: #f1f0ec; }
-
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-}
-
-h1 { font-size: 3rem; margin-bottom: 20px; }
-h2 { text-align: center; margin-bottom: 30px; }
-
 .hero {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 60px;
   align-items: center;
 }
 
-.subtitle { font-style: italic; margin-bottom: 20px; }
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.1rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
 
 .btn {
   display: inline-block;
-  padding: 12px 26px;
+  padding: 13px 30px;
   border-radius: 30px;
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
-  margin-right: 12px;
+  margin-right: 14px;
   text-decoration: none;
 }
 
 .primary {
-  background: var(--sage);
+  background: var(--crimson);
   color: white;
 }
 
-.primary:hover { background: var(--brass); }
+.primary:hover { background: var(--royal); }
 
 .secondary {
-  border: 1px solid var(--sage);
-  color: var(--sage);
+  border: 2px solid var(--royal);
+  color: var(--royal);
 }
 
 .secondary:hover {
-  border-color: var(--brass);
-  color: var(--brass);
+  background: var(--royal);
+  color: white;
 }
 
-.book-placeholder {
-  height: 320px;
-  background: #eee;
-  border: 2px dashed #ccc;
-  display: flex;
+.book-cover {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.section-light { background: #F1EFEA; }
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.narrow {
+  max-width: 760px;
+  margin: auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
   align-items: center;
-  justify-content: center;
-  font-family: 'Inter', sans-serif;
-  color: #777;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
 .testimonials {
@@ -128,26 +149,29 @@ h2 { text-align: center; margin-bottom: 30px; }
 .testimonial {
   background: white;
   padding: 30px;
-  border-radius: 10px;
+  border-left: 6px solid var(--gold);
   font-style: italic;
 }
 
-.newsletter input {
-  padding: 12px;
-  width: 260px;
-  border-radius: 30px;
-  border: 1px solid #ccc;
+.buy-box {
+  background: white;
+  padding: 50px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-.footer {
+footer {
+  background: var(--royal);
+  color: white;
+  text-align: center;
   padding: 30px 0;
-  border-top: 1px solid #e5e3df;
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
 }
 
 @media (max-width: 768px) {
-  .hero { grid-template-columns: 1fr; }
+  .hero, .about-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -163,7 +187,6 @@ h2 { text-align: center; margin-bottom: 30px; }
         <a href="#about">About</a>
         <a href="#book">The Book</a>
         <a href="#buy">Buy</a>
-        <a href="#contact">Contact</a>
       </div>
     </nav>
   </div>
@@ -173,32 +196,41 @@ h2 { text-align: center; margin-bottom: 30px; }
   <div class="container hero">
     <div>
       <h1>The Johnson Adventures</h1>
-      <p class="subtitle">Thoughtful storytelling, quiet wit, and reflections that stay with you.</p>
+      <p class="subtitle">
+        A story about family, movement, and learning to be fully present on the road that shapes us.
+      </p>
       <p>
-        I’ve spent a lifetime observing people, moments, and the meaning hidden in everyday experiences.
-        This book brings those reflections together with warmth, honesty, and gentle humor.
+        Some journeys take years to understand. This one began with a family drive from Oregon to North Carolina
+        and became a reflection on love, loss, growth, and the quiet moments that define who we become.
       </p>
       <br>
       <a href="#buy" class="btn primary">Buy Now — $25</a>
       <a href="https://www.amazon.com" target="_blank" class="btn secondary">Buy on Amazon</a>
     </div>
-    <div class="book-placeholder">Book Cover Coming Soon</div>
+    <img src="33d25aab-3056-4570-87b3-711b8cb5ab92.png" alt="The Johnson Adventures book cover" class="book-cover">
   </div>
 </section>
 
-<section id="about" class="light">
-  <div class="container narrow">
-    <h2>About Greg</h2>
-    <p>
-      I’m a thoughtful observer by nature—someone who believes the most meaningful stories often emerge
-      from everyday life. My professional journey has allowed me to work closely with people, ideas,
-      and systems, shaping my appreciation for curiosity, resilience, and connection.
-    </p>
-    <p>
-      Writing has always been my way of slowing down and making sense of the world. With a balance of wit
-      and reflection, I aim to share stories that feel personal yet familiar. <em>The Johnson Adventures</em>
-      is the culmination of years of learning, listening, and living.
-    </p>
+<section id="about" class="section-light">
+  <div class="container about-grid">
+    <img src="Greg Body and Headshot.jpg" alt="Greg Johnson" class="about-img">
+    <div>
+      <h2>About Greg</h2>
+      <p>
+        Greg Johnson is a visionary leader, brand strategist, and community builder with more than twenty-five years
+        of experience shaping influential global brands. His work is driven by a simple belief: people and organizations
+        thrive when clarity replaces complexity.
+      </p>
+      <p>
+        He is the Founder and Managing Director of Orbital Socket, a brand strategy and design agency, and previously
+        served as President of BooneOakley. Earlier in his career, Greg was a founding team member of the Jordan Brand at Nike
+        and held leadership roles at J. Walter Thompson and Saatchi & Saatchi.
+      </p>
+      <p>
+        Beyond business, Greg is the creator of Baste, a food brand built on connection and shared experience,
+        and a dedicated civic leader serving on numerous boards focused on education, equity, and economic mobility.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -206,55 +238,50 @@ h2 { text-align: center; margin-bottom: 30px; }
   <div class="container narrow">
     <h2>The Book</h2>
     <p>
-      <strong>The Johnson Adventures</strong> is a thoughtful, witty journey through curiosity,
-      connection, and the small moments that quietly shape who we become.
+      <strong>The Johnson Adventures</strong> is a meditation on presence.
+      On what it means to pay attention as life moves—children growing, friendships shifting,
+      and love stretching across distance.
     </p>
     <p>
-      These stories explore family, discovery, and resilience—inviting readers to pause,
-      smile, and reflect on their own paths.
+      Illustrated by Greg’s daughter, Carolina Joy Johnson, the book captures a family journey
+      through the eyes of someone who was too young to remember—yet somehow remembered everything.
     </p>
-    <p><strong>Format:</strong> Printed Edition</p>
-    <p><strong>Price:</strong> $25</p>
+    <p><strong>Format:</strong> Printed Edition<br>
+       <strong>Price:</strong> $25</p>
   </div>
 </section>
 
-<section id="buy" class="light">
-  <div class="container center">
-    <h2>Buy the Book</h2>
-    <p>Choose your preferred way to purchase.</p>
-    <br>
-    <a href="#" class="btn primary">Buy Now (PayPal / Card)</a>
-    <a href="https://www.amazon.com" target="_blank" class="btn secondary">Buy on Amazon</a>
-  </div>
-</section>
-
-<section class="light">
+<section class="section-light">
   <div class="container">
-    <h2>What Readers Are Saying</h2>
+    <h2>What Readers Feel</h2>
     <div class="testimonials">
-      <div class="testimonial">“A warm, engaging read that feels both personal and universal.”</div>
-      <div class="testimonial">“Thoughtful storytelling with just the right touch of humor.”</div>
-      <div class="testimonial">“You can feel the life experience behind every page.”</div>
+      <div class="testimonial">
+        “This book made me slow down. It reminded me that the moments we rush past are often the ones that matter most.”
+      </div>
+      <div class="testimonial">
+        “A moving reflection on family, memory, and the beauty of paying attention—told with warmth and grace.”
+      </div>
+      <div class="testimonial">
+        “The illustrations and words together feel deeply human. Honest, tender, and unforgettable.”
+      </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="container center">
-    <h2>Stay in Touch</h2>
-    <p>Sign up for updates, events, and future releases.</p>
-    <br>
-    <form class="newsletter">
-      <input type="email" placeholder="Your email address" required>
-      <button class="btn primary">Subscribe</button>
-    </form>
+<section id="buy">
+  <div class="container">
+    <div class="buy-box">
+      <h2>Buy the Book</h2>
+      <p>Available now in print.</p>
+      <br>
+      <a href="#" class="btn primary">Buy Now (PayPal / Card)</a>
+      <a href="https://www.amazon.com" target="_blank" class="btn secondary">Buy on Amazon</a>
+    </div>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container center">
-    © 2026 Greg Johnson. All rights reserved.
-  </div>
+<footer>
+  © 2026 Greg Johnson. All rights reserved.
 </footer>
 
 </body>
